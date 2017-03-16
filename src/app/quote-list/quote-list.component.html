@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor='let oneQuote of quoteList'>
+    <!-- [quote] -> what we passing to component <app-quote-item> with binding-->
+    <app-quote-item [quote]='oneQuote' (onDelete)='removeQuote($event)'></app-quote-item>
+    <!-- (onDelete)='removeQuote($event) => onDelete->customEvent |||| $event ->send value of onDelete event(e.g. id) -->
+  </li>
+</ul>
