@@ -1,4 +1,19 @@
-<h1>
-  Quotes : 
-</h1>
-<app-quote-list></app-quote-list>
+<header>
+  <h1>AngularQuotes APP</h1>
+
+  <nav>
+    <ul>
+      <li><a routerLink="home">Home</a></li>
+      <li><a routerLink="about">About</a></li>
+      <li><a routerLink="quotes">Quotes</a></li>
+      <li><a routerLink="contacts">Contacts</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Container for all routes -->
+<router-outlet></router-outlet>
+
+<footer>
+  <p> Made with &hearts; at Ironhack </p>
+</footer>
