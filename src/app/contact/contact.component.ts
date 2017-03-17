@@ -8,11 +8,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ContactComponent implements OnInit {
   contactId : string;
-  
-  constructor(private route: ActivatedRoute) { }
+
+  constructor(private route: ActivatedRoute) { }//Dependancy injection
 
   ngOnInit() {
-    this.route.params.subscribe((params)=> this.contactId = params['id'])
+    this.route.params.subscribe((params)=> {
+      this.contactId = params['id']//Get id from URL
+    })
   }
 
 }

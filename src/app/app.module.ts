@@ -11,16 +11,21 @@ import { MyHomeComponent } from './my-home/my-home.component';
 import { MyAboutComponent } from './my-about/my-about.component';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { ContactComponent } from './contact/contact.component';
+import { CounterComponent } from './counter/counter.component';
+import { MyCounterComponent } from './my-counter/my-counter.component';
+import { MySecondCounterComponent } from './my-second-counter/my-second-counter.component';
+import { CounterService } from './my-services/counter.service';
 
+//ROOTS:
 const routes: Routes = [
 
   { path: 'quotes', component: QuoteListComponent },//http://localhost:4200/quotes
-  { path: 'home', component: MyHomeComponent },
+  { path: 'home', component: MyHomeComponent },//http://localhost:4200/home
   { path: 'about', component: MyAboutComponent },
   { path: 'contacts', component: ContactListComponent },
   { path: 'contact/:id', component: ContactComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-
+  { path: 'counter', component: CounterComponent },
 ]
 
 @NgModule({
@@ -31,15 +36,18 @@ const routes: Routes = [
     MyHomeComponent,
     MyAboutComponent,
     ContactListComponent,
-    ContactComponent
+    ContactComponent,
+    CounterComponent,
+    MyCounterComponent,
+    MySecondCounterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes)//Need this for roots to work
   ],
-  providers: [],
+  providers: [ CounterService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

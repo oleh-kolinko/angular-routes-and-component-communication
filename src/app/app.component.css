@@ -1,0 +1,20 @@
+ul{
+  display: flex;
+  list-style: none;
+  text-align: center;
+  width: 40vw;
+}
+a{
+  background-color: #f9f9f9;
+  flex: 1;
+  padding: 10px;
+  text-decoration: none;
+}
+a:hover{
+  background-color: #eee;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+}
